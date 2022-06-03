@@ -1,0 +1,57 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 7px 18px;
+  border: 0.5px solid currentColor;
+  border-radius: $corner-radius;
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  color: $additional-color;
+  background-color: transparent;
+  outline: 3px solid transparent;
+  outline-offset: -2px;
+  transition-property: color, background-color, opacity, outline, outline-offset;
+  transition-duration: $trans-duration;
+
+  &:enabled {
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: $link-color;
+  }
+
+  &:active {
+    color: $link-color;
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline-color: $color-false;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    color: $additional-color;
+    opacity: 0.4;
+  }
+
+  @media (max-width: $narrow-mobile-width-only) {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 24px;
+    padding-left: 25px;
+  }
+}

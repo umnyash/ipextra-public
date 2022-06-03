@@ -1,0 +1,66 @@
+.option {
+  display: grid;
+  row-gap: 6px;
+  column-gap: 10px;
+  grid-row-gap: 6px;
+  grid-column-gap: 10px;
+  justify-content: start;
+  align-items: start;
+
+  &::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin: 4px;
+    border-radius: 50%;
+    background-color: $color-false;
+    box-shadow: 0 0 0 4px rgba(226, 94, 86, 0.2);
+    animation: pulse-false 2s infinite;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-auto-flow: column;
+  }
+}
+
+.option--row {
+  grid-auto-flow: column;
+
+  &::before {
+    margin-top: 6px;
+  }
+}
+
+.option--true::before {
+  background-color: $color-true;
+  box-shadow: 0 0 0 4px rgba(169, 198, 89, 0.2);
+  animation: pulse-true 2s infinite;
+}
+
+@keyframes pulse-false {
+  0% {
+    box-shadow: 0 0 0 0 rgba(226, 94, 86, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 8px rgba(226, 94, 86, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(226, 94, 86, 0);
+  }
+}
+
+@keyframes pulse-true {
+  0% {
+    box-shadow: 0 0 0 0 rgba(169, 198, 89, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 8px rgba(169, 198, 89, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(169, 198, 89, 0);
+  }
+}

@@ -1,0 +1,42 @@
+$alert-color: #5a6c88;
+
+.alert {
+  display: flex;
+  height: 100%;
+}
+
+.alert__content {
+  width: 280px;
+  padding: 40px 20px;
+  margin: auto;
+  text-align: center;
+  color: $alert-color;
+}
+
+.alert__title {
+  margin: 0 0 13px;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 500;
+  color: $color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 38px;
+    line-height: 52px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+}
+
+.alert__text {
+  margin: 0 0 13px;
+}
+
+.alert__button {
+  min-width: 132px;
+  margin-top: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 29px;
+  }
+}

@@ -1,0 +1,77 @@
+.torrent__title {
+  margin: 0 0 9px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+  }
+}
+
+.torrent__intro {
+  width: 310px;
+  margin: 0 0 20px;
+  color: $additional-color;
+
+  @media (max-width: $narrow-mobile-width-only) {
+    width: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.torrent__list {
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+  color: $additional-color;
+}
+
+.torrent__item {
+  margin: 0 0 16px;
+
+  &:last-child {
+    margin-bottom: 24px;
+  }
+}
+
+.torrent__footer {
+  margin: 0 0 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 19px;
+  }
+}
+
+.torrent__button {
+  min-width: 106px;
+  margin-bottom: 12px;
+
+  @media (max-width: $narrow-mobile-width-only) {
+    min-width: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 94px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 113px;
+  }
+}
+
+.torrent__button:first-child {
+  margin-right: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 5px;
+  }
+}

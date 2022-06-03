@@ -1,0 +1,80 @@
+.search-form {
+  display: grid;
+  padding: 6px 16px 7px;
+  border-radius: $corner-radius;
+  grid-template-columns: 1fr min-content;
+  grid-column-gap: 16px;
+  column-gap: 16px;
+  align-items: center;
+  background-color: $form-background-color;
+  caret-color: $link-color;
+}
+
+.search-form__field {
+  width: 100%;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  color: inherit;
+  background-color: $form-background-color;
+  box-shadow: inset 0 0 0 100px $form-background-color;
+
+  &:not(:placeholder-shown) {
+    -webkit-text-fill-color: $color-secondary;
+  }
+
+  &::placeholder {
+    color: $additional-color;
+    opacity: 1;
+    transition-property: color, opacity;
+    transition-duration: $trans-duration;
+  }
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.search-form__label::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 13px;
+  background-color: $additional-color;
+  mask-image: url("../img/loupe.svg");
+  mask-repeat: no-repeat;
+  mask-position: 0 0;
+  transition-property: background-color, opacity;
+  transition-duration: $trans-duration;
+}
+
+.search-form__field:hover {
+  &::placeholder {
+    color: $link-color;
+  }
+
+  + .search-form__label::before {
+    background-color: $link-color;
+  }
+}
+
+.search-form__field:focus {
+  outline: none;
+
+  &::placeholder {
+    color: $link-color;
+  }
+
+  + .search-form__label::before {
+    background-color: $link-color;
+  }
+}

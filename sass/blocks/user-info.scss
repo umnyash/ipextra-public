@@ -1,0 +1,52 @@
+.user-info {
+  padding: 5px 0 0;
+  color: $color-secondary;
+  background-color: $background-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 29px;
+  }
+}
+
+.user-info__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 103px;
+    column-gap: 103px;
+  }
+}
+
+.user-info__desc {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 425px;
+    margin: 0 0 50px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 345px;
+    margin-top: 8px;
+  }
+}
+
+.user-info__ip-location {
+  height: 142px;
+  background-color: $form-background-color;
+
+  @media (min-width: $tablet-width) {
+    height: 238px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 377px;
+  }
+}

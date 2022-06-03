@@ -1,0 +1,33 @@
+.logo {
+  display: inline-block;
+  transition: opacity $trans-duration;
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
+
+  &[href]:focus {
+    outline: none;
+  }
+}
+
+.logo__img {
+  vertical-align: middle;
+  width: 112px;
+  height: auto;
+  outline: 3px solid transparent;
+  outline-offset: -2px;
+  transition-property: outline, outline-offset;
+  transition-duration: $trans-duration;
+}
+
+.logo:focus-visible {
+  .logo__img {
+    outline-color: $color-false;
+    outline-offset: 2px;
+  }
+}

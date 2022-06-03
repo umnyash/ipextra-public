@@ -1,0 +1,22 @@
+.inline-link {
+  font-weight: 700;
+  text-decoration: none;
+  color: $link-color;
+  outline: 3px solid transparent;
+  outline-offset: -2px;
+  transition-property: color, opacity, outline, outline-offset;
+  transition-duration: $trans-duration;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline-color: $color-false;
+    outline-offset: 2px;
+  }
+}

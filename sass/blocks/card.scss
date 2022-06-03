@@ -1,0 +1,120 @@
+.card {
+  position: relative;
+  display: grid;
+  padding: 21px 12px 13px;
+  border-radius: $corner-radius;
+  grid-row-gap: 16px;
+  row-gap: 16px;
+  color: $color-secondary;
+  text-decoration: none;
+  background-color: $card-background-color;
+  outline: 4px solid transparent;
+  outline-offset: -2px;
+  transition-property: background-color, opacity, outline, outline-offset;
+  transition-duration: $trans-duration;
+
+  &:focus-visible {
+    outline-color: $color-false;
+    outline-offset: 2px;
+  }
+
+  @media (max-width: $narrow-mobile-width-only) {
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 16px;
+    column-gap: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 25px 24px 24px 46px;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 16px;
+    column-gap: 16px;
+  }
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  right: 9px;
+  bottom: 12px;
+  width: 16px;
+  height: 16px;
+  background-color: $link-additional-color;
+  mask-image: url("../img/arrow.svg");
+  mask-repeat: no-repeat;
+  mask-position: 0 0;
+  opacity: 0;
+  transition: opacity $trans-duration;
+
+  @media (min-width: $desktop-width) {
+    right: 21px;
+    bottom: 21px;
+  }
+}
+
+.card:hover {
+  background-color: $background-color-secondary;
+
+  &::after {
+    opacity: 1;
+  }
+}
+
+.card:active {
+  background-color: $background-color-secondary;
+  opacity: 0.8;
+
+  &::after {
+    opacity: 1;
+  }
+}
+
+.card__img {
+  vertical-align: middle;
+  border-radius: 50%;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 11px;
+  }
+}
+
+.card__text {
+  margin: 0 0 2px;
+  overflow-wrap: anywhere;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.card__text--accent {
+  font-size: 18px;
+  line-height: 25px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 38px;
+    line-height: 52px;
+  }
+}
+
+.card--small {
+  @media (min-width: $desktop-width) {
+    padding: 29px 16px 30px;
+  }
+}
+
+.card--small .card__text {
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.card--small .card__text--accent {
+  @media (min-width: $desktop-width) {
+    font-size: 30px;
+    line-height: 41px;
+  }
+}

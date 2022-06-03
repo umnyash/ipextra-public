@@ -1,0 +1,78 @@
+.page-footer {
+  padding: 41px 0 40px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $color-secondary;
+  background-color: $background-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    padding: 38px 0 18px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 38px 0 36px;
+  }
+}
+
+.page-footer__container {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-column-gap: 82px;
+    column-gap: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 45% 1fr;
+    grid-column-gap: 81px;
+    column-gap: 81px;
+    align-items: center;
+  }
+}
+
+.page-footer__logo {
+  margin-bottom: 17px;
+  transform: translateX(-4px);
+
+  @media (min-width: $tablet-width) {
+    transform: translateX(5px);
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: translate(0, 7px);
+  }
+}
+
+.page-footer__text {
+  margin: 0 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 18px;
+  }
+}
+
+.page-footer__link {
+  font-weight: 700;
+  text-decoration: none;
+  color: $link-additional-color;
+  outline: 3px solid transparent;
+  outline-offset: -2px;
+  transition-property: color, opacity, outline, outline-offset;
+  transition-duration: $trans-duration;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline-color: $color-false;
+    outline-offset: 2px;
+  }
+}

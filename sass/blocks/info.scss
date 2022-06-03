@@ -1,0 +1,26 @@
+.info {
+  padding-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    padding-bottom: 53px;
+    grid-template-columns: 47.4% 1fr;
+    grid-column-gap: 30px;
+    column-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 79px;
+    grid-template-columns: 54% 1fr;
+    grid-column-gap: 63px;
+    column-gap: 63px;
+  }
+}
+
+.info__basic {
+  margin: 0 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}

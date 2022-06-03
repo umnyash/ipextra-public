@@ -1,0 +1,27 @@
+.search-results {
+  padding: 25px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 34px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 70px 0;
+  }
+}
+
+.search-results__title {
+  margin: 0 0 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 29px;
+  }
+}
+
+.search-results__list {
+  margin: 0 0 32px;
+}

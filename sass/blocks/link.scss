@@ -1,0 +1,42 @@
+.link {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  grid-column-gap: 16px;
+  column-gap: 16px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 22px;
+  color: $additional-color;
+  outline-color: 3px solid transparent;
+  outline-offset: -2px;
+  transition-property: color, opacity, outline, outline-offset;
+  transition-duration: $trans-duration;
+
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: currentColor;
+    mask-image: url("../img/arrow.svg");
+    mask-repeat: no-repeat;
+    mask-position: 0 0;
+    transition-property: color, opacity;
+    transition-duration: $trans-duration;
+  }
+
+  &:hover {
+    color: $link-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline-color: $color-false;
+    outline-offset: 2px;
+  }
+}

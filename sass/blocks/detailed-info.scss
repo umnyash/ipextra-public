@@ -1,0 +1,27 @@
+.detailed-info__title {
+  margin: 0 0 13px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+  }
+}
+
+.detailed-info__list {
+  margin: 0;
+}
+
+.detailed-info__list--modal {
+  @media (min-width: $tablet-width) {
+    width: 522px;
+    row-gap: 25px;
+    grid-row-gap: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 355px;
+    row-gap: 21px;
+    column-gap: 21px;
+    grid-row-gap: 21px;
+    grid-column-gap: 21px;
+  }
+}

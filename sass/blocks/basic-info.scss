@@ -1,0 +1,94 @@
+.basic-info {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 0.5px solid $link-color;
+  align-content: flex-start;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+}
+
+.basic-info__title {
+  width: 34%;
+  margin: 2px auto 15px 1px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin: 0 0 12px 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 1px;
+  }
+}
+
+.basic-info__text {
+  width: 50%;
+  margin: 0 21px 14px 30px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: $additional-color;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+    margin: 0 auto 27px 4px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 39px;
+  }
+}
+
+.basic-info__card {
+  width: 100%;
+  margin: 0 0 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 41px;
+  }
+}
+
+.basic-info__list {
+  width: 100%;
+  max-width: 424px;
+  margin: 0 0 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 5px;
+  }
+}
+
+.basic-info--modal {
+  @media (min-width: $desktop-width) {
+    align-content: space-between;
+  }
+}
+
+.basic-info__list--modal {
+  max-width: 335px;
+
+  @media (min-width: $desktop-width) {
+    max-width: none;
+    margin: 0 0 0 5px;
+  }
+}
+
+.basic-info__item:first-child {
+  width: 101px;
+
+  @media (min-width: $tablet-width) {
+    width: 89px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 114px;
+  }
+}

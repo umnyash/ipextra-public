@@ -1,0 +1,30 @@
+.main {
+  padding: 68px 0 0;
+
+  &--grid {
+    display: grid;
+    align-content: space-between;
+  }
+}
+
+.main__header,
+.main__title {
+  margin: 0 0 48px;
+}
+
+.main__content {
+  margin-bottom: 90px;
+}
+
+.main__ip-location {
+  height: 142px;
+  background-color: $mobile-detail-color;
+
+  @media (min-width: $tablet-width) {
+    height: 238px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 377px;
+  }
+}

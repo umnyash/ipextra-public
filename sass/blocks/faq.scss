@@ -1,0 +1,43 @@
+.faq__header {
+  margin: 0 0 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 45px;
+  }
+}
+
+.faq__text {
+  @media (min-width: $tablet-width) {
+    width: 323px;
+    max-width: none;
+  }
+}
+
+.faq__list {
+  @media (min-width: $tablet-width) {
+    margin-left: 3px;
+    column-count: 2;
+    grid-column-gap: 3%;
+    column-gap: 3%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1168px;
+    margin-left: 0;
+    grid-column-gap: 112px;
+    column-gap: 112px;
+  }
+}
+
+.faq__item {
+  padding-bottom: 4px;
+  break-inside: avoid;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 30px;
+  }
+}

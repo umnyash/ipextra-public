@@ -1,0 +1,69 @@
+.info-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 10px;
+  column-gap: 10px;
+
+  @media (min-width: $desktop-width) {
+    grid-column-gap: 22px;
+    column-gap: 22px;
+  }
+}
+
+.info-card--modal {
+  @media (min-width: $tablet-width) {
+    grid-column-gap: 28px;
+    column-gap: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column-gap: 22px;
+    column-gap: 22px;
+  }
+}
+
+.info-card__img-wrapper {
+  margin-top: 10px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 12px;
+  }
+}
+
+.info-card__img {
+  border-radius: 50%;
+
+  &--with-shadow {
+    filter: drop-shadow(0 4px 14px fade-out($shadow-color, 0.3));
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 40px;
+    height: auto;
+  }
+}
+
+.info-card__text {
+  margin: 0 0 5px 1px;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: 500;
+  }
+}
+
+.info-card__text--accent {
+  margin: 0;
+  font-size: 38px;
+  line-height: 52px;
+  font-weight: 700;
+  color: $link-additional-color;
+
+  @media (min-width: $desktop-width) {
+    font-size: 48px;
+    line-height: 66px;
+  }
+}

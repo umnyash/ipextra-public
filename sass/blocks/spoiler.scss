@@ -1,0 +1,85 @@
+.spoiler {
+  border-bottom: 0.5px solid $link-color;
+  padding: 10px 0 18px;
+}
+
+.spoiler__title {
+  position: relative;
+  padding: 7px 38px 6px 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 22px;
+  outline: 3px solid transparent;
+  outline-offset: -2px;
+  transition-property: color, opacity, outline, outline-offset;
+  transition-duration: $trans-duration;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $link-color;
+    transition: background-color $trans-duration;
+  }
+
+  &::before {
+    top: 18px;
+    right: 0;
+    width: 28px;
+    height: 1.5px;
+  }
+
+  &::after {
+    top: 5px;
+    right: 13px;
+    width: 1.5px;
+    height: 28px;
+  }
+
+  &:hover {
+    color: $link-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline-color: $color-false;
+    outline-offset: 2px;
+  }
+}
+
+.spoiler[open] .spoiler__title::after {
+  background-color: transparent;
+}
+
+.spoiler__content {
+  padding: 0 14px;
+  margin: 10px 0 5px;
+  color: $additional-color;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 36px;
+    padding-left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-right: 36px;
+    padding-left: 0;
+  }
+}
+
+.spoiler__text {
+  margin: 0 0 0;
+}
+
+.spoiler__title::-webkit-details-marker,
+.spoiler__title::marker {
+  display: none;
+}
+
+.spoiler__title::-moz-list-bullet {
+  list-style-type: none;
+}
